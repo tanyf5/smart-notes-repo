@@ -33,7 +33,7 @@
     <div id="footer"></div>
 
     <script>
-      fetch('./src/partials/header.html')
+      fetch('/src/partials/header.html')
         .then(response => response.text())
         .then(data => document.getElementById('header').innerHTML = data);
       fetch('./src/partials/hero.html')
