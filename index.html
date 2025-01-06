@@ -20,11 +20,11 @@
       <div id="logos"></div>
       <div id="quote"></div>
       <div id="benefits"></div>
-      <div id="quote"></div>
+      <div id="quote-one"></div>
       <div id="film"></div>
-      <div id="quote"></div>
+      <div id="quote-two"></div>
       <div id="pricing"></div>
-      <div id="quote"></div>
+      <div id="quote-three"></div>
       <div id="faq"></div>
       <div id="signup"></div>
 
@@ -48,12 +48,21 @@
       fetch('./src/partials/benefits.html')
         .then(response => response.text())
         .then(data => document.getElementById('benefits').innerHTML = data);
+      fetch('./src/partials/quote.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('quote-one').innerHTML = data);
       fetch('./src/partials/film.html')
         .then(response => response.text())
         .then(data => document.getElementById('film').innerHTML = data);
+      fetch('./src/partials/quote.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('quote-two').innerHTML = data);
       fetch('./src/partials/pricing.html')
         .then(response => response.text())
         .then(data => document.getElementById('pricing').innerHTML = data);
+      fetch('./src/partials/quote.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('quote-three').innerHTML = data);
       fetch('./src/partials/faq.html')
         .then(response => response.text())
         .then(data => document.getElementById('faq').innerHTML = data);
