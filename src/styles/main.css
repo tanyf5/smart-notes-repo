@@ -5,6 +5,9 @@ body {
     background-color: #080808;
     color: #EFECE6;
     margin: 0 auto;
+    background-image: url('../../public/layer.svg'), url('../../public/layer.svg'), url('../../public/layer-one.svg'), url('../../public/layer-two.svg'), url('../../public/layer-one.svg');
+    background-repeat: no-repeat;
+    background-position: -200px 1000px, -200px 2650px, 100% 2750px, 0 5200px, 100% 6400px;
 }
   
 h1,
@@ -48,6 +51,8 @@ img {
     margin: 0 auto;
     padding: 64px 20px;
 }
+
+
   
   
   
@@ -60,6 +65,10 @@ img {
     .container {
       max-width: 744px;
       padding: 96px 48px;
+    }
+
+    body {
+        background-position: -200px 1200px, -200px 2650px, 100% 3050px, 0 5600px, 100% 7100px;
     }
 }
   
@@ -74,6 +83,10 @@ img {
     .container {
       max-width: 1440px;
       padding: 80px 96px;
+    }
+
+    body {
+        background-position: -200px 1200px, -200px 2250px, 100% 3050px, 0 4500px, 100% 5400px;
     }
 }
   
