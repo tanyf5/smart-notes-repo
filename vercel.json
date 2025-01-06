@@ -1,8 +1,0 @@
-{
-    "rewrites": [
-      {
-        "source": "/src/partials/:path*",
-        "destination": "/public/partials/:path*"
-      }
-    ]
-  }
