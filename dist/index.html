@@ -16,27 +16,53 @@
     <div id="header"></div>
 
     <main>
-
-      <load src="./partials/hero.html" />
-      <load src="./partials/logos.html" />
-      <load src="./partials/quote.html" />
-      <load src="./partials/benefits.html" />
-      <load src="./partials/quote.html" />
-      <load src="./partials/film.html" />
-      <load src="./partials/quote.html" />
-      <load src="./partials/pricing.html" />
-      <load src="./partials/quote.html" />
-      <load src="./partials/faq.html" />
-      <load src="./partials/signup.html" />
+      <div id="hero"></div>
+      <div id="logos"></div>
+      <div id="quote"></div>
+      <div id="benefits"></div>
+      <div id="quote"></div>
+      <div id="film"></div>
+      <div id="quote"></div>
+      <div id="pricing"></div>
+      <div id="quote"></div>
+      <div id="faq"></div>
+      <div id="signup"></div>
 
     </main>
 
-    <load src="./partials/footer.html" />
+    <div id="footer"></div>
 
     <script>
-      fetch('./header.html')
+      fetch('./src/partials/header.html')
         .then(response => response.text())
         .then(data => document.getElementById('header').innerHTML = data);
+      fetch('./src/partials/hero.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('hero').innerHTML = data);
+      fetch('./src/partials/logos.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('logos').innerHTML = data);
+      fetch('./src/partials/quote.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('quote').innerHTML = data);
+      fetch('./src/partials/benefits.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('benefits').innerHTML = data);
+      fetch('./src/partials/film.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('film').innerHTML = data);
+      fetch('./src/partials/pricing.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('pricing').innerHTML = data);
+      fetch('./src/partials/faq.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('faq').innerHTML = data);
+      fetch('./src/partials/signup.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('signup').innerHTML = data);
+      fetch('./src/partials/footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer').innerHTML = data);
   </script>
 
   </body>
