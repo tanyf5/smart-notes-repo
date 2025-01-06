@@ -1,13 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Smart Notes</title>
+    <link rel="icon" type="image/svg+xml" href="./img/svg/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/main.css">
   </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+  <body class="no-scroll">
+
+    <div id="header"></div>
+
+    <main>
+      <div id="hero"></div>
+      <div id="logos"></div>
+      <div id="quote"></div>
+      <div id="benefits"></div>
+      <div id="quote"></div>
+      <div id="film"></div>
+      <div id="quote"></div>
+      <div id="pricing"></div>
+      <div id="quote"></div>
+      <div id="faq"></div>
+      <div id="signup"></div>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+      fetch('./src/partials/header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+      fetch('./src/partials/hero.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('hero').innerHTML = data);
+      fetch('./src/partials/logos.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('logos').innerHTML = data);
+      fetch('./src/partials/quote.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('quote').innerHTML = data);
+      fetch('./src/partials/benefits.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('benefits').innerHTML = data);
+      fetch('./src/partials/film.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('film').innerHTML = data);
+      fetch('./src/partials/pricing.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('pricing').innerHTML = data);
+      fetch('./src/partials/faq.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('faq').innerHTML = data);
+      fetch('./src/partials/signup.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('signup').innerHTML = data);
+      fetch('./src/partials/footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+
   </body>
 </html>

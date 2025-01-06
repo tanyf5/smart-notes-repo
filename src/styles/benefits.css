@@ -1,0 +1,156 @@
+.benefits {
+    display: flex;
+    justify-content: center;
+}
+
+.benefits-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    justify-content: center;
+    align-items: center;
+}
+
+.benef-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    max-width: 335px;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.benefits-title {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.benef-title-span {
+    background: linear-gradient(25deg, #017373 0%, #AAD9D1 100%);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+
+.benef-par {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    color: #BABABA;
+}
+
+.benef-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.benef-icon {
+    height: 18px;
+    width: 18px;
+    border: 1px solid #048C80;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.benef-item {
+    max-width: 335px;
+    padding: 24px;
+    border: 0.5px solid #048C80;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.benef-item-ttl {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.benef-item-par {
+    font-size: 14px;
+    font-weight: 300;
+    color: #BABABA;
+}
+
+
+
+
+/* Media 744px */
+
+@media screen and (min-width: 744px) {
+    .benefits-title {
+        font-size: 48px;
+    }
+    
+    .benef-par {
+        font-size: 16px;
+        max-width: 410px;
+    }
+
+    .benef-title-wrapper {
+        max-width: 648px;
+    }
+
+    .benef-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .benef-item {
+        max-width: 267px;
+    }
+
+    .benef-item:nth-child(3),
+    .benef-item:nth-child(6) {
+        max-width: 600px;
+    }
+
+    .benef-item-ttl {
+        font-size: 18px;
+    }
+    
+    .benef-item-par {
+        font-size: 16px;
+    }
+}
+
+
+
+
+/* Media 1440px */
+
+@media screen and (min-width: 1440px) {
+    .benef-list {
+        align-items: start;
+    }
+
+    .benef-item:nth-child(1),
+    .benef-item:nth-child(2) {
+        flex: 2;
+        max-width: 561px; 
+        flex-basis: 100%;
+    }
+
+    .benef-item:nth-child(3),
+    .benef-item:nth-child(4),
+    .benef-item:nth-child(5),
+    .benef-item:nth-child(6) {
+        min-width: 250px; 
+    }
+
+    .benef-item {
+        flex: 0;
+        width: 269px; 
+    }
+
+    .benef-item-ttl {
+        font-size: 20px;
+    }
+}
