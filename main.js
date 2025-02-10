@@ -1,9 +1,3 @@
-import Swiper from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
-import { Scrollbar } from "swiper/modules";
-
 /* Partials imports */
 
 fetch("./src/partials/header.html")
