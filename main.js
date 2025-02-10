@@ -1,3 +1,11 @@
+import Swiper from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
+import { Scrollbar } from "swiper/modules";
+
+/* Partials imports */
+
 fetch("./src/partials/header.html")
   .then((response) => response.text())
   .then((data) => {
@@ -9,7 +17,10 @@ fetch("./src/partials/hero.html")
   .then((data) => (document.getElementById("hero").innerHTML = data));
 fetch("./src/partials/logos.html")
   .then((response) => response.text())
-  .then((data) => (document.getElementById("logos").innerHTML = data));
+  .then((data) => {
+    document.getElementById("logos").innerHTML = data;
+    initSlider();
+  });
 fetch("./src/partials/quote.html")
   .then((response) => response.text())
   .then((data) => (document.getElementById("quote").innerHTML = data));
@@ -41,6 +52,8 @@ fetch("./src/partials/footer.html")
   .then((response) => response.text())
   .then((data) => (document.getElementById("footer").innerHTML = data));
 
+/* Mobile menu */
+
 function initMobileMenu() {
   const mobileMenu = document.querySelector(".js-menu-container");
   const openMenuBtn = document.querySelector(".js-open-menu");
@@ -48,11 +61,6 @@ function initMobileMenu() {
   const closeMenuLinks = document.querySelectorAll(".mob-menu-item");
   const closeMenuSocs = document.querySelectorAll(".mob-socials-item");
   const body = document.body;
-
-  if (!mobileMenu) {
-    console.error("❌ Помилка: елементи меню не знайдені.");
-    return;
-  }
 
   const toggleMenu = () => {
     const isMenuOpen = openMenuBtn.getAttribute("aria-expanded") === "true";
@@ -68,6 +76,22 @@ function initMobileMenu() {
   closeMenuBtn.addEventListener("click", toggleMenu);
   closeMenuLinks.forEach((item) => item.addEventListener("click", toggleMenu));
   closeMenuSocs.forEach((item) => item.addEventListener("click", toggleMenu));
+}
 
-  console.log("✅ Меню успішно ініціалізоване!");
+/* Logos Slider */
+
+function initSlider() {
+  const logos = document.querySelector(".logos-container");
+
+  const checkViewport = () => {
+    const rect = logos.getBoundingClientRect();
+    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+      logos.style.animationPlayState = "running";
+    } else {
+      logos.style.animationPlayState = "paused";
+    }
+  };
+
+  window.addEventListener("scroll", checkViewport);
+  checkViewport();
 }
