@@ -1,377 +1,384 @@
 .pricing {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .pricing-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
 }
 
 .pricing-title-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    align-items: center;
-    justify-content: center;
-    max-width: 335px;
-    padding-right: 8px;
-    padding-left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  max-width: 335px;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 
 .pricing-title {
-    font-size: 30px;
-    font-weight: 600;
-    text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
 }
 
 .pricing-title-span {
-    background: linear-gradient(25deg, #017373 0%, #AAD9D1 100%);
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
+  background: linear-gradient(25deg, #017373 0%, #aad9d1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
 
 .pricing-par {
-    font-size: 14px;
-    font-weight: 300;
-    text-align: center;
-    color: #BABABA;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  color: #bababa;
 }
 
 .monthly,
 .yearly {
-    font-size: 14px;
-    font-weight: 300;
-    text-align: center;
-    color: #EFECE6;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  color: #efece6;
 }
 
 .pricing-slider-wrapper {
-    display: flex;
-    gap: 14px;
-    max-width: 335px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  gap: 14px;
+  max-width: 335px;
+  align-items: center;
+  justify-content: center;
 }
 
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 64px;
-    height: 33px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 33px;
 }
-  
+
 .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
-  
+
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 20px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
 }
-  
+
 .slider:before {
-    position: absolute;
-    content: "";
-    height: 21px;
-    width: 21px;
-    left: 6px;
-    bottom: 6px;
-    background-color: white;
-    border-radius: 50%;
-    transition: .4s;
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px;
+  left: 6px;
+  bottom: 6px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
 }
-  
+
 input:checked + .slider {
-    background-color: #017373; 
+  background-color: #017373;
 }
-  
+
 input:checked + .slider:before {
-    transform: translateX(30px); 
+  transform: translateX(30px);
 }
 
 .save {
-    cursor: pointer;
-    font-weight: 300;
-    font-size: 14px;
-    color: #080808;
-    background: linear-gradient(25deg, #017373 0%, #AAD9D1 100%);
-    border: none;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 16px;
-    transition: transform 0.1s cubic-bezier(0.42, 0, 1, 1), width 0.1s cubic-bezier(0.42, 0, 1, 1), height 0.1s cubic-bezier(0.42, 0, 1, 1);
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 14px;
+  color: #080808;
+  background: linear-gradient(25deg, #017373 0%, #aad9d1 100%);
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  transition: transform 0.1s cubic-bezier(0.42, 0, 1, 1),
+    width 0.1s cubic-bezier(0.42, 0, 1, 1),
+    height 0.1s cubic-bezier(0.42, 0, 1, 1);
 }
 
 .save:hover,
 .save:active,
 .save:focus {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .pricing-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
 }
 
 .pricing-item-top {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .pricing-item-one {
-    background-color: #F7F7F7;
-    max-width: 335px;
-    border: 2px solid #048C80;
-    border-radius: 10px;
-    padding: 40px 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
+  background-color: #f7f7f7;
+  max-width: 335px;
+  border: 2px solid #048c80;
+  border-radius: 10px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
 .pr-item-ttl-div {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
 }
 
 .pr-item-icon {
-    height: 18px;
-    width: 18px;
-    border: 1px solid #048C80;
-    padding: 7px;
-    border-radius: 5px;
+  height: 25px;
+  width: 25px;
+  border: 1px solid #048c80;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pr-item-icon svg {
+  height: 18px;
+  width: 18px;
 }
 
 .pr-item-ttl {
-    font-size: 14px;
-    font-weight: 300;
-    color: #048C80;
+  font-size: 14px;
+  font-weight: 300;
+  color: #048c80;
 }
 
 .pricing-price-one {
-    font-size: 16px;
-    font-weight: 300;
-    color: #333333;
+  font-size: 16px;
+  font-weight: 300;
+  color: #333333;
 }
 
 .pricing-price-span-one {
-    font-size: 40px;
-    font-weight: 800;
-    color: #080808;
+  font-size: 40px;
+  font-weight: 800;
+  color: #080808;
 }
 
 .pricing-pros-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .pricing-pros-item-one {
-    font-size: 14px;
-    font-weight: 300;
-    color: #333333;
+  font-size: 14px;
+  font-weight: 300;
+  color: #333333;
 }
 
 .pricing-start-btn-one {
-    background-color: #EFECE6;
-    max-width: 271px;
-    border: 1px solid #048C80;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 16px 50px;
-    transition: transform 0.1s cubic-bezier(0.42, 0, 1, 1), width 0.1s cubic-bezier(0.42, 0, 1, 1), height 0.1s cubic-bezier(0.42, 0, 1, 1);
+  background-color: #efece6;
+  max-width: 271px;
+  border: 1px solid #048c80;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 50px;
+  transition: transform 0.1s cubic-bezier(0.42, 0, 1, 1),
+    width 0.1s cubic-bezier(0.42, 0, 1, 1),
+    height 0.1s cubic-bezier(0.42, 0, 1, 1);
 }
 
 .pricing-start-btn-one:hover,
 .pricing-start-btn-one:active,
 .pricing-start-btn-one:focus {
-    transform: scale(1.07);
+  transform: scale(1.07);
 }
 
 .hero-signup-icon-one {
-    width: 24px;
-    height: 24px;
-    fill: #048C80;
-    border: 1px solid #048C80;
-    border-radius: 5px;
+  width: 24px;
+  height: 24px;
+  fill: #048c80;
+  border: 1px solid #048c80;
+  border-radius: 5px;
 }
 
 .no-card-par {
-    font-weight: 300;
-    font-size: 12px;
-    color: #737373;
+  font-weight: 300;
+  font-size: 12px;
+  color: #737373;
 }
 
 .pricing-item-two {
-    background-color: transparent;
-    max-width: 335px;
-    border: 2px solid #048C80;
-    border-radius: 10px;
-    padding: 40px 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
+  background-color: transparent;
+  max-width: 335px;
+  border: 2px solid #048c80;
+  border-radius: 10px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
 .pricing-price-two {
-    font-size: 16px;
-    font-weight: 300;
-    color: #048C80;
+  font-size: 16px;
+  font-weight: 300;
+  color: #048c80;
 }
 
 .pricing-price-span-two {
-    font-size: 40px;
-    font-weight: 800;
-    color: #F7F7F7;
+  font-size: 40px;
+  font-weight: 800;
+  color: #f7f7f7;
 }
 
 .pricing-pros-item-two {
-    font-size: 14px;
-    font-weight: 300;
-    color: #BABABA;
+  font-size: 14px;
+  font-weight: 300;
+  color: #bababa;
 }
 
 .pricing-start-btn-two {
-    background: linear-gradient(25deg, #017373 0%, #AAD9D1 100%);
-    max-width: 271px;
-    border: 1px solid #048C80;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 16px 50px;
-    transition: transform 0.1s cubic-bezier(0.42, 0, 1, 1), width 0.1s cubic-bezier(0.42, 0, 1, 1), height 0.1s cubic-bezier(0.42, 0, 1, 1);
+  background: linear-gradient(25deg, #017373 0%, #aad9d1 100%);
+  max-width: 271px;
+  border: 1px solid #048c80;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 50px;
+  transition: transform 0.1s cubic-bezier(0.42, 0, 1, 1),
+    width 0.1s cubic-bezier(0.42, 0, 1, 1),
+    height 0.1s cubic-bezier(0.42, 0, 1, 1);
 }
 
 .pricing-start-btn-two:hover,
 .pricing-start-btn-two:active,
 .pricing-start-btn-two:focus {
-    transform: scale(1.07);
+  transform: scale(1.07);
 }
-
-
-
-
 
 /* Media 744px */
 
 @media screen and (min-width: 744px) {
-    .pricing-title-wrapper {
-        max-width: 648px;
-    }
-    
-    .pricing-title {
-        font-size: 48px;
-    }
+  .pricing-title-wrapper {
+    max-width: 648px;
+  }
 
-    .pricing-par {
-        font-size: 16px;
-        max-width: 426px;
-    }
+  .pricing-title {
+    font-size: 48px;
+  }
 
-    .monthly,
-    .yearly {
-        font-size: 18px;
-    }
+  .pricing-par {
+    font-size: 16px;
+    max-width: 426px;
+  }
 
-    .pricing-item-one {
-        max-width: 472px;
-    }
+  .monthly,
+  .yearly {
+    font-size: 18px;
+  }
 
-    .pricing-price-span-one {
-        font-size: 48px;
-    }
+  .pricing-item-one {
+    max-width: 472px;
+  }
 
-    .pricing-pros-item-one {
-        font-size: 16px;
-    }
+  .pricing-price-span-one {
+    font-size: 48px;
+  }
 
-    .pricing-start-btn-one {
-        max-width: 408px;
-        font-weight: 300;
-        font-size: 18px;
-        padding: 16px 120px;
-    }
+  .pricing-pros-item-one {
+    font-size: 16px;
+  }
 
-    .pricing-item-two {
-        max-width: 472px;
-    }
+  .pricing-start-btn-one {
+    max-width: 408px;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 16px 110px;
+  }
 
-    .pricing-price-span-two {
-        font-size: 48px;
-    }
+  .pricing-item-two {
+    max-width: 472px;
+  }
 
-    .pricing-pros-item-two {
-        font-size: 16px;
-    }
+  .pricing-price-span-two {
+    font-size: 48px;
+  }
 
-    .pricing-start-btn-two {
-        max-width: 408px;
-        font-weight: 300;
-        font-size: 18px;
-        padding: 16px 120px;
-    }
+  .pricing-pros-item-two {
+    font-size: 16px;
+  }
+
+  .pricing-start-btn-two {
+    max-width: 408px;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 16px 120px;
+  }
 }
-
-
 
 /* Media 1440px */
 
 @media screen and (min-width: 1440px) {
-    .pricing-list {
-        flex-direction: row;
-        align-items: start;
-    }
+  .pricing-list {
+    flex-direction: row;
+    align-items: start;
+  }
 
-    .pricing-item-one {
-        max-width: 357px;
-        max-height: 432px;
-    }
+  .pricing-item-one {
+    max-width: 357px;
+    max-height: 500px;
+  }
 
-    .pricing-item-two {
-        max-width: 357px;
-        max-height: 432px;
-    }
+  .pricing-item-two {
+    max-width: 357px;
+    max-height: 500px;
+  }
 
-    .pricing-start-btn-one {
-        max-width: 293px;
-        padding: 16px 56px;
-    }
+  .pricing-start-btn-one {
+    max-width: 293px;
+    padding: 16px 56px;
+  }
 
-    .pricing-start-btn-two {
-        max-width: 293;
-        padding: 16px 56px;
-    }
+  .pricing-start-btn-two {
+    max-width: 293;
+    padding: 16px 56px;
+  }
 }
