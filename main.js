@@ -1,6 +1,3 @@
-import Accordion from "accordion-js";
-import "accordion-js/dist/accordion.min.css";
-
 /* Partials imports */
 
 fetch("./src/partials/header.html")
