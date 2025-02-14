@@ -33,7 +33,10 @@ fetch("./src/partials/quote.html")
   .then((data) => (document.getElementById("quote-two").innerHTML = data));
 fetch("./src/partials/pricing.html")
   .then((response) => response.text())
-  .then((data) => (document.getElementById("pricing").innerHTML = data));
+  .then((data) => {
+    document.getElementById("pricing").innerHTML = data;
+    initSale();
+  });
 fetch("./src/partials/quote.html")
   .then((response) => response.text())
   .then((data) => (document.getElementById("quote-three").innerHTML = data));
@@ -76,6 +79,8 @@ function initMobileMenu() {
   closeMenuSocs.forEach((item) => item.addEventListener("click", toggleMenu));
 }
 
+/* Nav click */
+
 function initScrolling() {
   document.querySelectorAll(".menu-item").forEach((link) => {
     link.addEventListener("click", function (event) {
@@ -112,6 +117,27 @@ function initSlider() {
 
   window.addEventListener("scroll", checkViewport);
   checkViewport();
+}
+
+/* Price change */
+
+function initSale() {
+  const slider = document.querySelector("#slider");
+  const priceInd = document.querySelector(".pricing-price-span-one");
+  const priceTeam = document.querySelector(".pricing-price-span-two");
+
+  function updatePrice() {
+    if (slider.checked) {
+      priceInd.textContent = "$7.49";
+      priceTeam.textContent = "$14.99";
+    } else {
+      priceInd.textContent = "$9.99";
+      priceTeam.textContent = "$19.99";
+    }
+  }
+
+  slider.addEventListener("change", updatePrice);
+  updatePrice();
 }
 
 /* Accordion */
