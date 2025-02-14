@@ -47,8 +47,12 @@ a {
   cursor: pointer;
 }
 
-button {
+button,
+a {
   cursor: pointer;
+  font-family: "DM Sans", serif;
+  font-style: normal;
+  letter-spacing: -0.01em;
 }
 
 img {
