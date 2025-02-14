@@ -104,8 +104,7 @@ input:checked + .slider:before {
 }
 
 .save {
-  cursor: pointer;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
   color: #080808;
   background: linear-gradient(25deg, #017373 0%, #aad9d1 100%);
@@ -115,15 +114,6 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: center;
   padding: 8px 16px;
-  transition: transform 0.1s cubic-bezier(0.42, 0, 1, 1),
-    width 0.1s cubic-bezier(0.42, 0, 1, 1),
-    height 0.1s cubic-bezier(0.42, 0, 1, 1);
-}
-
-.save:hover,
-.save:active,
-.save:focus {
-  transform: scale(1.1);
 }
 
 .pricing-list {
