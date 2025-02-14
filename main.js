@@ -48,7 +48,10 @@ fetch("./src/partials/faq.html")
   });
 fetch("./src/partials/signup.html")
   .then((response) => response.text())
-  .then((data) => (document.getElementById("signup").innerHTML = data));
+  .then((data) => {
+    document.getElementById("signup").innerHTML = data;
+    initScrolling();
+  });
 fetch("./src/partials/footer.html")
   .then((response) => response.text())
   .then((data) => (document.getElementById("footer").innerHTML = data));
@@ -82,41 +85,35 @@ function initMobileMenu() {
 /* Nav click */
 
 function initScrolling() {
-  document.querySelectorAll(".menu-item").forEach((link) => {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-
-      const headerHeight = document.querySelector("header").offsetHeight;
-      const targetId = this.getAttribute("href");
-      const targetSection = document.querySelector(targetId);
-
-      if (targetSection) {
-        const targetPosition = targetSection.offsetTop - headerHeight;
-
-        window.scrollTo({
-          top: targetPosition,
-        });
-      }
-    });
-  });
-
-  const getStrtdBtn = document.querySelector(".get-started-bnt");
-  getStrtdBtn.addEventListener("click", function (event) {
+  const scrollToSection = (event) => {
     event.preventDefault();
 
     const headerHeight = document.querySelector("header").offsetHeight;
-
-    const targetId = this.getAttribute("href");
+    const targetId = event.target.getAttribute("href");
     const targetSection = document.querySelector(targetId);
 
     if (targetSection) {
       const targetPosition = targetSection.offsetTop - headerHeight;
-
       window.scrollTo({
         top: targetPosition,
       });
     }
+  };
+
+  document.querySelectorAll(".menu-item").forEach((link) => {
+    link.addEventListener("click", scrollToSection);
   });
+
+  const getStrtdBtn = document.querySelector(".get-started-bnt");
+  if (getStrtdBtn) {
+    getStrtdBtn.addEventListener("click", scrollToSection);
+  }
+
+  const signUpBtn = document.querySelector(".signup-for-free");
+  if (signUpBtn) {
+    signUpBtn.addEventListener("click", scrollToSection);
+  }
+  console.log(signUpBtn);
 }
 
 /* Logos Slider */
