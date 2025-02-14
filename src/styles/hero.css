@@ -1,0 +1,184 @@
+.hero {
+  display: flex;
+  align-items: center;
+  max-width: 375px;
+  margin: 0 auto;
+  padding-top: 140px;
+  padding-bottom: 64px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.hero-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 335px;
+}
+
+.hero-title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.hero-ttl-span {
+  background: linear-gradient(25deg, #017373 0%, #aad9d1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.hero-text {
+  font-weight: 300;
+  font-size: 16px;
+  color: #bababa;
+}
+
+.hero-contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #efece6;
+  border: none;
+  border-radius: 8px;
+  padding: 6px;
+  margin: 0 auto;
+}
+
+.hero-form-input {
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 300;
+  border: none;
+  color: #080808;
+  outline: transparent;
+  padding: 19px 24px;
+  transition: color 0.1s cubic-bezier(0.42, 0, 1, 1);
+}
+
+.hero-form-input:hover::-webkit-input-placeholder,
+.hero-form-input:active::-webkit-input-placeholder,
+.hero-form-input:focus::-webkit-input-placeholder {
+  color: #868585;
+}
+
+.hero-form-input::-webkit-input-placeholder {
+  color: #333333;
+  font-size: 14px;
+}
+
+.hero-signup-btn {
+  font-weight: 600;
+  color: #080808;
+  background: linear-gradient(25deg, #017373 0%, #aad9d1 100%);
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  transition: transform 0.1s cubic-bezier(0.42, 0, 1, 1),
+    width 0.1s cubic-bezier(0.42, 0, 1, 1),
+    height 0.1s cubic-bezier(0.42, 0, 1, 1);
+}
+
+.hero-signup-icon {
+  width: 24px;
+  height: 24px;
+  fill: #333333;
+  border: 1px solid #333333;
+  border-radius: 5px;
+}
+
+.hero-signup-btn:hover,
+.hero-signup-btn:active,
+.hero-signup-btn:focus {
+  transform: scale(1.06);
+}
+
+.hero-icon {
+  display: none;
+}
+
+/* Media 744px */
+
+@media screen and (min-width: 744px) {
+  .hero {
+    max-width: 744px;
+    padding-top: 140px;
+    padding-bottom: 96px;
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+
+  .hero-text-wrapper {
+    max-width: 636px;
+  }
+
+  .hero-title {
+    font-size: 59px;
+  }
+
+  .hero-text {
+    max-width: 400px;
+    font-size: 18px;
+  }
+
+  .hero-contact {
+    max-width: 434px;
+    margin-left: 0px;
+  }
+}
+
+/* Media 1440px */
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+    padding-top: 200px;
+    padding-right: 96px;
+    padding-left: 96px;
+    padding-bottom: 80px;
+  }
+
+  .hero-wrapper {
+    margin-left: 56px;
+  }
+
+  .hero-icon {
+    display: block;
+    width: 363px;
+    height: 483px;
+  }
+
+  .hero-form-input {
+    font-size: 16px;
+  }
+
+  .hero-form-input::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+
+  .hero-signup-btn {
+    font-size: 16px;
+  }
+
+  .hero-contact {
+    padding: 8px;
+  }
+}

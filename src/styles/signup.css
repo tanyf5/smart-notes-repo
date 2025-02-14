@@ -1,0 +1,133 @@
+.signup-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-text-btn-div {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: start;
+}
+
+.signup-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    max-width: 335px;
+}
+
+.signup-title {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: start;
+}
+
+.signup-title-span {
+    background: linear-gradient(25deg, #017373 0%, #AAD9D1 100%);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+
+.signup-par {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: start;
+    color: #BABABA;
+}
+
+.signup-for-free {
+    font-weight: 600;
+    font-size: 16px;
+    color: #080808;
+    background: linear-gradient(25deg, #017373 0%, #AAD9D1 100%);
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 40px;
+    transition: transform 0.1s cubic-bezier(0.42, 0, 1, 1), width 0.1s cubic-bezier(0.42, 0, 1, 1), height 0.1s cubic-bezier(0.42, 0, 1, 1);
+}
+
+.signup-for-free:hover,
+.signup-for-free:active,
+.signup-for-free:focus {
+    transform: scale(1.05);
+}
+
+.signup-for-free-icon {
+    width: 32px;
+    height: 32px;
+    fill: #080808;
+    border: 1px solid #080808;
+    border-radius: 5px;
+}
+
+.signup-img-wrapper {
+    display: none;
+}
+
+
+
+
+/* Media 744px */
+
+@media screen and (min-width: 744px)  {
+    .signup-text-btn-div {
+        gap: 32px;
+    }
+
+    .signup-title-wrapper {
+        max-width: 490px;
+    }
+
+    .signup-title {
+        font-size: 48px;
+    }
+
+    .signup-par {
+        font-size: 16px;
+    }
+
+    .signup-for-free {
+        font-size: 18px;
+    }
+}
+
+
+
+/* Media 1440px */
+
+@media screen and (min-width: 1440px) {
+    .signup-wrapper {
+        gap: 48px;
+    }
+
+    .signup-title-wrapper {
+        gap: 24px;
+    }
+
+    .signup-img-wrapper {
+        display: block;
+    }
+
+    .signup-svg-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        position: relative;
+        gap: 0;
+    }
+    
+    .signup-icon {
+        width: 376px;
+        height: 382px;
+    }
+}
