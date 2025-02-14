@@ -1,3 +1,6 @@
+import Accordion from "accordion-js";
+import "accordion-js/dist/accordion.min.css";
+
 /* Partials imports */
 
 fetch("./src/partials/header.html")
@@ -38,7 +41,10 @@ fetch("./src/partials/quote.html")
   .then((data) => (document.getElementById("quote-three").innerHTML = data));
 fetch("./src/partials/faq.html")
   .then((response) => response.text())
-  .then((data) => (document.getElementById("faq").innerHTML = data));
+  .then((data) => {
+    document.getElementById("faq").innerHTML = data;
+    initAccordion();
+  });
 fetch("./src/partials/signup.html")
   .then((response) => response.text())
   .then((data) => (document.getElementById("signup").innerHTML = data));
@@ -88,4 +94,16 @@ function initSlider() {
 
   window.addEventListener("scroll", checkViewport);
   checkViewport();
+}
+
+/* Accordion */
+
+function initAccordion() {
+  const accordion = document.querySelector(".accordion-container");
+
+  new Accordion(accordion, {
+    openOnInit: [0],
+    duration: 500,
+    showMultiple: true,
+  });
 }
