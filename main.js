@@ -7,6 +7,7 @@ fetch("./src/partials/header.html")
   .then((response) => response.text())
   .then((data) => {
     document.getElementById("header").innerHTML = data;
+    initScrolling();
     initMobileMenu();
   });
 fetch("./src/partials/hero.html")
@@ -76,6 +77,26 @@ function initMobileMenu() {
   closeMenuBtn.addEventListener("click", toggleMenu);
   closeMenuLinks.forEach((item) => item.addEventListener("click", toggleMenu));
   closeMenuSocs.forEach((item) => item.addEventListener("click", toggleMenu));
+}
+
+function initScrolling() {
+  document.querySelectorAll(".menu-item").forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const headerHeight = document.querySelector("header").offsetHeight;
+      const targetId = this.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
+        const targetPosition = targetSection.offsetTop - headerHeight;
+
+        window.scrollTo({
+          top: targetPosition,
+        });
+      }
+    });
+  });
 }
 
 /* Logos Slider */
