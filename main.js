@@ -99,6 +99,24 @@ function initScrolling() {
       }
     });
   });
+
+  const getStrtdBtn = document.querySelector(".get-started-bnt");
+  getStrtdBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    const headerHeight = document.querySelector("header").offsetHeight;
+
+    const targetId = this.getAttribute("href");
+    const targetSection = document.querySelector(targetId);
+
+    if (targetSection) {
+      const targetPosition = targetSection.offsetTop - headerHeight;
+
+      window.scrollTo({
+        top: targetPosition,
+      });
+    }
+  });
 }
 
 /* Logos Slider */
