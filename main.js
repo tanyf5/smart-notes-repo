@@ -104,6 +104,10 @@ function initScrolling() {
     link.addEventListener("click", scrollToSection);
   });
 
+  document.querySelectorAll(".mob-menu-item").forEach((link) => {
+    link.addEventListener("click", scrollToSection);
+  });
+
   const getStrtdBtn = document.querySelector(".get-started-bnt");
   if (getStrtdBtn) {
     getStrtdBtn.addEventListener("click", scrollToSection);

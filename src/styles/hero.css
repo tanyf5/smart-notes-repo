@@ -55,13 +55,14 @@
 }
 
 .hero-form-input {
+  max-width: 145px;
   background-color: transparent;
   font-size: 14px;
   font-weight: 300;
   border: none;
   color: #080808;
   outline: transparent;
-  padding: 19px 24px;
+  padding: 19px 14px;
   transition: color 0.1s cubic-bezier(0.42, 0, 1, 1);
 }
 
@@ -84,7 +85,7 @@
   border-radius: 8px;
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 4px;
   align-items: center;
   justify-content: center;
   padding: 12px 24px;
@@ -93,12 +94,17 @@
     height 0.1s cubic-bezier(0.42, 0, 1, 1);
 }
 
-.hero-signup-icon {
-  width: 24px;
-  height: 24px;
-  fill: #333333;
+.hero-signup-icon-wrapper {
+  max-width: 27px;
+  max-height: 27px;
   border: 1px solid #333333;
   border-radius: 5px;
+}
+
+.hero-signup-icon {
+  max-width: 24px;
+  max-height: 24px;
+  fill: #333333;
 }
 
 .hero-signup-btn:hover,

@@ -217,12 +217,20 @@ input:checked + .slider:before {
   transform: scale(1.07);
 }
 
-.hero-signup-icon-one {
-  width: 24px;
-  height: 24px;
-  fill: #048c80;
+.hero-signup-icon-one-wrapper {
+  width: 27px;
+  height: 27px;
   border: 1px solid #048c80;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-signup-icon-one {
+  fill: #048c80;
+  width: 24px;
+  height: 24px;
 }
 
 .no-card-par {
