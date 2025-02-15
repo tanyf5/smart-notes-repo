@@ -41,14 +41,10 @@ li {
   margin: 0;
 }
 
-a {
-  color: currentColor;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 button,
 a {
+  text-decoration: none;
+  color: #111111;
   cursor: pointer;
   font-family: "DM Sans", serif;
   font-style: normal;
