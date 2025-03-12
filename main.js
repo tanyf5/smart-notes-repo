@@ -9,7 +9,10 @@ fetch("./src/partials/header.html")
   });
 fetch("./src/partials/hero.html")
   .then((response) => response.text())
-  .then((data) => (document.getElementById("hero").innerHTML = data));
+  .then((data) => {
+    document.getElementById("hero").innerHTML = data;
+    initHeroSbscrb();
+  });
 fetch("./src/partials/logos.html")
   .then((response) => response.text())
   .then((data) => {
@@ -54,7 +57,11 @@ fetch("./src/partials/signup.html")
   });
 fetch("./src/partials/footer.html")
   .then((response) => response.text())
-  .then((data) => (document.getElementById("footer").innerHTML = data));
+  .then((data) => {
+    document.getElementById("footer").innerHTML = data;
+    initScrolling();
+    initFooterSbscrb();
+  });
 
 /* Mobile menu */
 
@@ -82,7 +89,7 @@ function initMobileMenu() {
   closeMenuSocs.forEach((item) => item.addEventListener("click", toggleMenu));
 }
 
-/* Nav click */
+/* Scroll + header height*/
 
 function initScrolling() {
   const scrollToSection = (event) => {
@@ -118,6 +125,10 @@ function initScrolling() {
     signUpBtn.addEventListener("click", scrollToSection);
   }
   console.log(signUpBtn);
+
+  document.querySelectorAll(".footer-menu-item").forEach((link) => {
+    link.addEventListener("click", scrollToSection);
+  });
 }
 
 /* Logos Slider */
@@ -169,4 +180,121 @@ function initAccordion() {
     duration: 500,
     showMultiple: true,
   });
+}
+
+/* Hero subscribe */
+
+function initHeroSbscrb() {
+  const emailInput = document.querySelector(".hero-form-input");
+  const sbscrbBtn = document.querySelector(".hero-signup-btn");
+  const heroContact = document.querySelector(".hero-contact");
+
+  const modal = document.querySelector("#hero-signup-modal");
+  const modalBackdrop = document.querySelector(".hero-modal-backdrop");
+  const modalClose = document.querySelector(".hero-close-signup-modal-btn");
+
+  const body = document.body;
+
+  // Email validation function
+  function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+
+  // Email validation while input
+  emailInput.addEventListener("input", () => {
+    if (!validateEmail(emailInput.value)) {
+      heroContact.classList.add("invalid");
+    } else {
+      heroContact.classList.remove("invalid");
+    }
+  });
+
+  // "Subscribe" addEventListener
+  sbscrbBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    if (!validateEmail(emailInput.value)) {
+      event.preventDefault();
+      heroContact.classList.add("invalid");
+    } else {
+      heroContact.classList.remove("invalid");
+      console.log("Submitted email:", emailInput.value);
+
+      modal.style.display = "flex";
+      modalBackdrop.style.display = "block";
+      body.classList.add("no-scroll");
+
+      emailInput.value = "";
+    }
+  });
+
+  // Close modal
+  function closeModal() {
+    modal.style.display = "none";
+    modalBackdrop.style.display = "none";
+    body.classList.remove("no-scroll");
+  }
+
+  modalClose.addEventListener("click", closeModal);
+
+  modalBackdrop.addEventListener("click", closeModal);
+}
+
+/* Footer subscribe */
+
+function initFooterSbscrb() {
+  const emailInput = document.querySelector(".footer-form-input");
+  const sbscrbBtn = document.querySelector(".footer-form-btn");
+
+  const modal = document.querySelector("#signup-modal");
+  const modalBackdrop = document.querySelector(".modal-backdrop");
+  const modalClose = document.querySelector(".close-signup-modal-btn");
+
+  const body = document.body;
+
+  // Email validation function
+  function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+
+  // Email validation while input
+  emailInput.addEventListener("input", () => {
+    if (!validateEmail(emailInput.value)) {
+      emailInput.classList.add("invalid");
+    } else {
+      emailInput.classList.remove("invalid");
+    }
+  });
+
+  // "Subscribe" addEventListener
+  sbscrbBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    if (!validateEmail(emailInput.value)) {
+      event.preventDefault();
+      emailInput.classList.add("invalid");
+    } else {
+      emailInput.classList.remove("invalid");
+      console.log("Submitted email:", emailInput.value);
+
+      modal.style.display = "flex";
+      modalBackdrop.style.display = "block";
+      body.classList.add("no-scroll");
+
+      emailInput.value = "";
+    }
+  });
+
+  // Close modal
+  function closeModal() {
+    modal.style.display = "none";
+    modalBackdrop.style.display = "none";
+    body.classList.remove("no-scroll");
+  }
+
+  modalClose.addEventListener("click", closeModal);
+
+  modalBackdrop.addEventListener("click", closeModal);
 }

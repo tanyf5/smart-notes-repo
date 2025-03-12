@@ -1,4 +1,4 @@
-<section class="hero">
+<section class="hero" id="hero">
   <link rel="stylesheet" href="./src/styles/hero.css" />
   <div class="hero-wrapper">
     <div class="hero-text-wrapper">
@@ -1291,4 +1291,42 @@
       </clipPath>
     </defs>
   </svg>
+
+  <!--   Modal   -->
+  <div class="hero-modal-backdrop"></div>
+  <div class="hero-signup-modal" id="hero-signup-modal">
+    <button class="hero-close-signup-modal-btn">
+      <svg
+        width="20"
+        height="21"
+        viewBox="0 0 25 26"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="2.3728"
+          y="0.979248"
+          width="32"
+          height="2"
+          transform="rotate(45 2.3728 0.979248)"
+          fill="#EFECE6"
+        />
+        <rect
+          x="0.958496"
+          y="23.6067"
+          width="32"
+          height="2"
+          transform="rotate(-45 0.958496 23.6067)"
+          fill="#EFECE6"
+        />
+      </svg>
+    </button>
+    <div class="hero-signup-modal-content">
+      <h2 class="hero-signup-modal-title">You're In!</h2>
+      <p class="hero-signup-modal-text">
+        Welcome to SmartNotes! Your subscription is now active, and you're ready
+        to unlock the full potential of smart note-taking.
+      </p>
+    </div>
+  </div>
 </section>

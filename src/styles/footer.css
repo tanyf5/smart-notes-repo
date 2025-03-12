@@ -63,6 +63,7 @@
   flex-direction: row;
   align-items: center;
   position: relative;
+  justify-content: space-between;
 }
 
 .footer-form-input {
@@ -89,14 +90,18 @@
   font-size: 14px;
 }
 
+.footer-form-input.invalid {
+  border: 1px solid #ef1d1d;
+}
+
 .footer-form-btn {
   width: 30px;
   height: 30px;
   border: none;
   background-color: transparent;
   position: absolute;
-  right: 71px;
-  bottom: 15px;
+  right: 60px;
+  bottom: 14px;
   transition: transform 0.1s cubic-bezier(0.42, 0, 1, 1),
     width 0.1s cubic-bezier(0.42, 0, 1, 1),
     height 0.1s cubic-bezier(0.42, 0, 1, 1);
@@ -105,7 +110,7 @@
 .footer-form-btn:hover,
 .footer-form-btn:active,
 .footer-form-btn:focus {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .hero-signup-icon-footer {
@@ -236,6 +241,67 @@
   display: block;
 }
 
+/* Modal */
+
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+}
+
+.signup-modal {
+  display: none;
+  width: 300px;
+  height: 220px;
+  background-color: #080808;
+  padding: 40px;
+  border: 1px solid #017373;
+  border-radius: 15px;
+
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-signup-modal-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+
+  transition: transform 0.1s cubic-bezier(0.42, 0, 1, 1);
+}
+
+.close-signup-modal-btn:hover,
+.close-signup-modal-btn:active,
+.close-signup-modal-btn:focus {
+  transform: scale(1.2);
+}
+
+.signup-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.signup-modal-text {
+  text-align: center;
+  font-weight: 200;
+}
+
 /* Media 744px */
 
 @media screen and (min-width: 744px) {
@@ -246,7 +312,8 @@
   }
 
   .footer-form-btn {
-    right: 345px;
+    right: 276px;
+    bottom: 13px;
   }
 
   .footer-menu-title {
@@ -285,6 +352,11 @@
     height: 40px;
     width: 40px;
   }
+
+  .signup-modal {
+    width: 370px;
+    height: 220px;
+  }
 }
 
 /* Media 1440px */
@@ -315,8 +387,8 @@
   }
 
   .footer-form-btn {
-    right: 24px;
-    bottom: 16px;
+    right: 15px;
+    bottom: 14px;
   }
 
   .footer-menu-wrapper {
